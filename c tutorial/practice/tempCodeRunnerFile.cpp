@@ -1,2 +1,2 @@
-
-cout<<*q<<"-"<<*q<<endl;
+cout<<" "<<x<<endl;
+    count(x+1);
