@@ -18,10 +18,10 @@ complex(){
     }
 
     void display(){
-        cout<<real<<" +"<<img<<"i"<<endl;
+        cout<<real<<"+"<<img<<"i"<<endl;
 
     }
-        //operator function call here + operator is using 
+ 
     complex operator +(complex &A){
         complex ans;
         ans.real= real + A.real;

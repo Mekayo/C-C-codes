@@ -42,8 +42,8 @@ int ans=-1;
 }
 int main(){
 
-  vector<int> stalls = {1,2,6,8,9,10};
-    int k = 4;  // Number of cows
+  vector<int> stalls = {1,2,4,8,9};
+    int k = 3;  // Number of cows
     cout << "Largest minimum distance: " << aggressiveCows(stalls, k) << endl;
 
 
