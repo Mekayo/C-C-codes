@@ -41,32 +41,35 @@ void print(Node* &head){
         cout<<endl;
 }
 
-void insertAtMiddle(Node* &tail,Node* &head,int position, int d ){
-//insert at first
-if(position==1){
-    insertAtHead(head,d);
-    return;
-} 
-Node* temp=head;
+void insertAtMiddle(Node* &tail, Node* &head, int position, int d) {
+    // Insert at first
+    if (position == 1) {
+        insertAtHead(head, d);
+        return;
+    }
 
+    Node* temp = head;
+    int cnt = 1;
 
-int cnt=1;
-while(cnt<position -1){
-   temp= temp->next;
-    cnt++;
+    // Traverse to the position or stop if the end of the list is reached
+    while (cnt < position - 1 && temp != NULL) {
+        temp = temp->next;
+        cnt++;
+    }
 
+    // If position is beyond the current list length, insert at the tail
+    if (temp == NULL || temp->next == NULL) {
+        insertAtTail(tail, d);
+        return;
+    }
+
+    // Insert in the middle
+    Node* nodetoinsert = new Node(d);
+    nodetoinsert->next = temp->next;
+    temp->next = nodetoinsert;
 }
 
-//insert at last pointing tail to last data enter if we call to insert at end last position
-
-if(temp->next==NULL){
-    insertAtTail(tail,d);
-    return;
-}
-Node* nodetoinsert=new Node(d);
-nodetoinsert->next=temp->next;
-temp->next=nodetoinsert;
-}
+//deletion
 void deleteNode(int position,Node* &head){
  if(position==1){
     Node* temp=head;
