@@ -7,8 +7,6 @@ This repository contains my previous practice code written in Visual Studio Code
 The repository may include code from different languages and topics such as:
 
 - C / C++ programs
-- Python scripts
-- HTML / CSS / JavaScript snippets
 - Data Structures and Algorithms (DSA)
 - Simple mini-projects
 - Debugging and logic practice
